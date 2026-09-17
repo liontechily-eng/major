@@ -13,6 +13,16 @@ header .logo {
   top: 40px;
   left: 40px;
   font-size: 2rem;
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo img {
+  width: 60px;
+  height: 60px;
 }
 
 main {
@@ -52,7 +62,7 @@ main .container p {
 
 main .container a {
   display: inline-block;
-  color: black;
+  color: #0b3e18;
   background: white;
   font-size: 1.3rem;
   padding: 10px 30px;
