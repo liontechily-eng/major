@@ -3,37 +3,254 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Home Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css" />
+    <title>Apex Bank Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="dashboard.css" />
   </head>
   <body>
-    <div class="dashboard">
-      <header>
-        <div class="logo">
-          <img src="asset/apex.png" alt="apex-brand-logo" />
-          APEX BANK
-        </div>
-        <div class="right-side-header">
-          <div class="notification">
-            <span><i class="ri-notification-3-line"></i></span>
+    <div class="dashboard-layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark">
+            <img src="asset/apex.png" alt="apex_logo" width="40px" />
           </div>
-          <div class="user-profile-btn">
-            <img
-              src="asset/profile-picture.png"
-              alt="user-profile-image"
-              width="30px"
-            />
-            <div class="user-name">John Doe</div>
-            <span><i class="ri-arrow-drop-down-line"></i></span>
-          </div>
+          <span class="brand-name">APEX BANK</span>
         </div>
-      </header>
-      <aside></aside>
-      <main></main>
+
+        <nav class="sidebar-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#">
+            <i class="ri-home-5-fill"></i>
+            <span>Dashboard</span>
+          </a>
+          <a class="nav-link" href="#">
+            <i class="ri-bank-card-line"></i>
+            <span>Accounts</span>
+          </a>
+          <a class="nav-link" href="#">
+            <i class="ri-send-plane-line"></i>
+            <span>Transfer</span>
+          </a>
+          <a class="nav-link" href="#">
+            <i class="ri-file-list-3-line"></i>
+            <span>Transactions</span>
+          </a>
+
+          <a class="nav-link" href="#">
+            <i class="ri-chat-ai-fill"></i>
+            <span>Chat Admin</span>
+          </a>
+        </nav>
+
+        <a class="nav-link logout" href="#">
+          <i class="ri-logout-box-r-line"></i>
+          <span>Logout</span>
+        </a>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation"
+          >
+            <i class="ri-menu-line"></i>
+          </button>
+
+          <div class="topbar-actions">
+            <button
+              class="icon-button notification-button"
+              aria-label="Notifications"
+            >
+              <i class="ri-notification-3-line"></i>
+              <span class="notification-count">3</span>
+            </button>
+
+            <div class="divider"></div>
+
+            <button
+              class="profile-button"
+              id="profileButton"
+              aria-expanded="false"
+            >
+              <div class="avatar">JD</div>
+              <span class="profile-name">Major</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu">
+              <a href="#"><i class="ri-user-line"></i> Profile</a>
+              <a href="#"><i class="ri-settings-3-line"></i> Settings</a>
+              <a href="#"><i class="ri-logout-box-r-line"></i> Logout</a>
+            </div>
+          </div>
+        </header>
+
+        <section class="content">
+          <section class="welcome-section">
+            <div>
+              <p class="eyebrow">Welcome back,</p>
+              <h1>Major<span class="wave">👋</span></h1>
+              <p class="welcome-description">
+                Here's a quick overview of your account.
+              </p>
+            </div>
+
+            <div class="welcome-message">
+              <p>Your financial goals<br />are within reach.</p>
+            </div>
+
+            <div class="welcome-illustration" aria-hidden="true">
+              <i class="ri-bank-line"></i>
+              <span></span>
+              <span></span>
+            </div>
+          </section>
+
+          <section class="balance-card">
+            <div>
+              <div class="card-label">
+                <span>Total Balance</span>
+                <i class="ri-eye-line"></i>
+              </div>
+              <h2>$0.00</h2>
+              <p class="account-details">
+                **** 1234 <span>•</span> Savings Account
+              </p>
+            </div>
+
+            <div class="balance-growth">
+              <strong><i class="ri-arrow-up-line"></i> +2.5%</strong>
+              <span>vs. last month</span>
+            </div>
+          </section>
+
+          <section class="panel quick-actions-panel">
+            <div class="section-heading">
+              <h2>Quick Actions</h2>
+            </div>
+
+            <div class="quick-actions">
+              <a href="#" class="action-card">
+                <span class="action-icon deposit"
+                  ><i class="ri-arrow-down-line"></i
+                ></span>
+                <span class="action-text">
+                  <strong>Deposit</strong>
+                  <small>Add money to your account</small>
+                </span>
+                <i class="ri-arrow-right-s-line action-arrow"></i>
+              </a>
+
+              <a href="#" class="action-card">
+                <span class="action-icon transfer"
+                  ><i class="ri-arrow-left-right-line"></i
+                ></span>
+                <span class="action-text">
+                  <strong>Transfer</strong>
+                  <small>Send money to another account</small>
+                </span>
+                <i class="ri-arrow-right-s-line action-arrow"></i>
+              </a>
+
+              <a href="#" class="action-card">
+                <span class="action-icon withdraw"
+                  ><i class="ri-bank-card-line"></i
+                ></span>
+                <span class="action-text">
+                  <strong>Withdraw</strong>
+                  <small>Take money from your account</small>
+                </span>
+                <i class="ri-arrow-right-s-line action-arrow"></i>
+              </a>
+            </div>
+          </section>
+
+          <section class="panel transactions-panel">
+            <div class="section-heading transactions-heading">
+              <h2>Recent Transactions</h2>
+              <a href="#">View All <i class="ri-arrow-right-line"></i></a>
+            </div>
+
+            <div class="transactions-list">
+              <article class="transaction">
+                <span class="transaction-icon income"
+                  ><i class="ri-arrow-down-line"></i
+                ></span>
+                <div class="transaction-info">
+                  <strong>Salary Deposit</strong>
+                  <small>Jan 24, 2025 <span>•</span> 10:30 AM</small>
+                </div>
+                <strong class="transaction-amount positive">+$2,500.00</strong>
+                <span class="status">Completed</span>
+              </article>
+
+              <article class="transaction">
+                <span class="transaction-icon outgoing"
+                  ><i class="ri-arrow-left-right-line"></i
+                ></span>
+                <div class="transaction-info">
+                  <strong>Money Transfer</strong>
+                  <small>Jan 22, 2025 <span>•</span> 2:15 PM</small>
+                </div>
+                <strong class="transaction-amount">-$500.00</strong>
+                <span class="status">Completed</span>
+              </article>
+
+              <article class="transaction">
+                <span class="transaction-icon withdrawal"
+                  ><i class="ri-bank-card-line"></i
+                ></span>
+                <div class="transaction-info">
+                  <strong>ATM Withdrawal</strong>
+                  <small>Jan 20, 2025 <span>•</span> 11:45 AM</small>
+                </div>
+                <strong class="transaction-amount">-$200.00</strong>
+                <span class="status">Completed</span>
+              </article>
+
+              <article class="transaction">
+                <span class="transaction-icon purchase"
+                  ><i class="ri-shopping-cart-line"></i
+                ></span>
+                <div class="transaction-info">
+                  <strong>Online Purchase</strong>
+                  <small>Jan 18, 2025 <span>•</span> 6:20 PM</small>
+                </div>
+                <strong class="transaction-amount">-$75.00</strong>
+                <span class="status">Completed</span>
+              </article>
+
+              <article class="transaction">
+                <span class="transaction-icon income"
+                  ><i class="ri-arrow-left-right-line"></i
+                ></span>
+                <div class="transaction-info">
+                  <strong>Money Transfer</strong>
+                  <small>Jan 16, 2025 <span>•</span> 9:10 AM</small>
+                </div>
+                <strong class="transaction-amount">-$300.00</strong>
+                <span class="status">Completed</span>
+              </article>
+            </div>
+          </section>
+        </section>
+      </main>
     </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="dashboard.js"></script>
   </body>
 </html>
