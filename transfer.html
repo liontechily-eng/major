@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Transfer | APEX BANK</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="transfer.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="logo">
+            <img src="asset/apex.png" alt="APEX BANK Logo" />
+            <span>APEX BANK</span>
+          </div>
+
+          <nav class="navigation">
+            <a href="dashboard.html">
+              <i class="ri-home-5-fill"></i>
+              <span>Dashboard</span>
+            </a>
+
+            <a href="accounts.html">
+              <i class="ri-bank-line"></i>
+              <span>Accounts</span>
+            </a>
+
+            <a href="transfer.html" class="active">
+              <i class="ri-send-plane-line"></i>
+              <span>Transfer</span>
+            </a>
+
+            <a href="transactions.html">
+              <i class="ri-history-line"></i>
+              <span>Transactions</span>
+            </a>
+
+            <a class="nav-link" href="#">
+              <i class="ri-chat-ai-fill"></i>
+              <span>Chat Admin</span>
+            </a>
+          </nav>
+        </div>
+
+        <a href="login.html" class="logout">
+          <i class="ri-logout-box-r-line"></i>
+          <span>Logout</span>
+        </a>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- HEADER -->
+        <header class="top-header">
+          <div class="page-title">
+            <h1>Transfer</h1>
+            <p>Send money securely to another account.</p>
+          </div>
+
+          <div class="header-right">
+            <button class="notification">
+              <i class="ri-notification-3-line"></i>
+            </button>
+
+            <div class="profile">
+              <img src="asset/profile-picture.png" alt="Profile picture" />
+
+              <div class="profile-info">
+                <strong>John Doe</strong>
+                <span>Personal Account</span>
+              </div>
+
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- TRANSFER SECTION -->
+        <section class="transfer-section">
+          <div class="transfer-card">
+            <div class="card-heading">
+              <div class="heading-icon">
+                <i class="ri-send-plane-fill"></i>
+              </div>
+
+              <div>
+                <h2>Send Money</h2>
+                <p>Enter the recipient's details below.</p>
+              </div>
+            </div>
+
+            <form class="transfer-form">
+              <!-- RECIPIENT ACCOUNT -->
+              <div class="form-group">
+                <label for="account-number"> Recipient Account Number </label>
+
+                <div class="input-wrapper">
+                  <i class="ri-bank-card-line"></i>
+
+                  <input
+                    type="text"
+                    id="account-number"
+                    name="account-number"
+                    placeholder="Enter account number"
+                    maxlength="10"
+                    inputmode="numeric"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- BANK -->
+              <div class="form-group">
+                <label for="bank"> Select Bank </label>
+
+                <div class="input-wrapper">
+                  <i class="ri-bank-line"></i>
+
+                  <select id="bank" name="bank" required>
+                    <option value="" selected disabled>
+                      Select recipient's bank
+                    </option>
+
+                    <option value="access">Access Bank</option>
+
+                    <option value="first">First Bank</option>
+
+                    <option value="gtbank">GTBank</option>
+
+                    <option value="opay">Opay</option>
+
+                    <option value="uba">UBA</option>
+
+                    <option value="zenith">Zenith Bank</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- AMOUNT -->
+              <div class="form-group">
+                <label for="amount"> Amount </label>
+
+                <div class="input-wrapper amount-input">
+                  <span class="currency">₦</span>
+
+                  <input
+                    type="number"
+                    id="amount"
+                    name="amount"
+                    placeholder="0.00"
+                    min="1"
+                    step="0.01"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- DESCRIPTION -->
+              <div class="form-group">
+                <label for="description">
+                  Description <span>(Optional)</span>
+                </label>
+
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="ri-file-text-line"></i>
+
+                  <textarea
+                    id="description"
+                    name="description"
+                    placeholder="What is this transfer for?"
+                    rows="4"
+                    maxlength="100"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- AVAILABLE BALANCE -->
+              <div class="available-balance">
+                <div>
+                  <span>Available Balance</span>
+                  <strong>₦00.00</strong>
+                </div>
+
+                <i class="ri-wallet-3-line"></i>
+              </div>
+
+              <!-- BUTTON -->
+              <button type="submit" class="continue-btn">
+                Continue
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- SECURITY INFO -->
+          <div class="security-note">
+            <i class="ri-shield-check-line"></i>
+
+            <div>
+              <strong>Secure Transfer</strong>
+              <p>
+                Always verify the recipient's account details before confirming
+                a transfer.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

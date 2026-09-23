@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Transactions | APEX BANK</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="transactions.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="logo">
+            <img src="asset/apex.png" alt="APEX BANK Logo" />
+            <span>APEX BANK</span>
+          </div>
+
+          <nav class="navigation">
+            <a href="dashboard.html">
+              <i class="ri-dashboard-line"></i>
+              <span>Dashboard</span>
+            </a>
+
+            <a href="account.html">
+              <i class="ri-bank-line"></i>
+              <span>Accounts</span>
+            </a>
+
+            <a href="transfer.html">
+              <i class="ri-send-plane-line"></i>
+              <span>Transfer</span>
+            </a>
+
+            <a href="transactions.html" class="active">
+              <i class="ri-history-line"></i>
+              <span>Transactions</span>
+            </a>
+
+            <a class="nav-link" href="#">
+              <i class="ri-chat-ai-fill"></i>
+              <span>Chat Admin</span>
+            </a>
+          </nav>
+        </div>
+
+        <a href="login.html" class="logout">
+          <i class="ri-logout-box-r-line"></i>
+          <span>Logout</span>
+        </a>
+      </aside>
+
+      <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+      <main class="main-content">
+        <!-- HEADER -->
+
+        <header class="top-header">
+          <div class="page-title">
+            <h1>Transactions</h1>
+            <p>View and manage your transaction history.</p>
+          </div>
+
+          <div class="header-right">
+            <button class="notification" aria-label="Notifications">
+              <i class="ri-notification-3-line"></i>
+            </button>
+
+            <div class="profile">
+              <img src="asset/profile-picture.png" alt="Profile picture" />
+
+              <div class="profile-info">
+                <strong>Major</strong>
+                <span>Personal Account</span>
+              </div>
+
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- =========================
+                 TRANSACTIONS SECTION
+            ========================== -->
+
+        <section class="transactions-section">
+          <!-- SUMMARY CARDS -->
+
+          <div class="summary-grid">
+            <div class="summary-card">
+              <div class="summary-icon income">
+                <i class="ri-arrow-down-line"></i>
+              </div>
+
+              <div>
+                <span>Total Income</span>
+                <strong>₦320,000.00</strong>
+              </div>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-icon expense">
+                <i class="ri-arrow-up-line"></i>
+              </div>
+
+              <div>
+                <span>Total Expenses</span>
+                <strong>₦70,000.00</strong>
+              </div>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-icon transactions">
+                <i class="ri-exchange-line"></i>
+              </div>
+
+              <div>
+                <span>Total Transactions</span>
+                <strong>24</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRANSACTION CARD -->
+
+          <div class="transaction-card">
+            <div class="transaction-header">
+              <div>
+                <h2>Transaction History</h2>
+                <p>Your recent account activity.</p>
+              </div>
+
+              <button class="download-btn">
+                <i class="ri-download-2-line"></i>
+                Export
+              </button>
+            </div>
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+              <div class="search-box">
+                <i class="ri-search-line"></i>
+
+                <input type="search" placeholder="Search transactions..." />
+              </div>
+
+              <select id="transaction-filter">
+                <option value="all">All Transactions</option>
+
+                <option value="income">Income</option>
+
+                <option value="expense">Expenses</option>
+
+                <option value="pending">Pending</option>
+              </select>
+
+              <select id="date-filter">
+                <option value="all">All Time</option>
+
+                <option value="today">Today</option>
+
+                <option value="week">This Week</option>
+
+                <option value="month">This Month</option>
+              </select>
+            </div>
+
+            <!-- TRANSACTION TABLE -->
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Transaction</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <!-- Transaction 1 -->
+
+                  <tr>
+                    <td>
+                      <div class="transaction-name">
+                        <div class="transaction-icon received">
+                          <i class="ri-arrow-down-line"></i>
+                        </div>
+
+                        <div>
+                          <strong>Salary Payment</strong>
+                          <span>From APEX TECH LTD</span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span class="date"> Sep 23, 2026 </span>
+
+                      <small>10:32 AM</small>
+                    </td>
+
+                    <td>
+                      <span class="type income-type"> Income </span>
+                    </td>
+
+                    <td>
+                      <strong class="amount income-amount">
+                        +₦150,000.00
+                      </strong>
+                    </td>
+
+                    <td>
+                      <span class="status successful"> Successful </span>
+                    </td>
+                  </tr>
+
+                  <!-- Transaction 2 -->
+
+                  <tr>
+                    <td>
+                      <div class="transaction-name">
+                        <div class="transaction-icon sent">
+                          <i class="ri-arrow-up-line"></i>
+                        </div>
+
+                        <div>
+                          <strong>Transfer to David</strong>
+                          <span>Zenith Bank</span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span class="date"> Sep 22, 2026 </span>
+
+                      <small>04:15 PM</small>
+                    </td>
+
+                    <td>
+                      <span class="type expense-type"> Expense </span>
+                    </td>
+
+                    <td>
+                      <strong class="amount expense-amount">
+                        -₦25,000.00
+                      </strong>
+                    </td>
+
+                    <td>
+                      <span class="status successful"> Successful </span>
+                    </td>
+                  </tr>
+
+                  <!-- Transaction 3 -->
+
+                  <tr>
+                    <td>
+                      <div class="transaction-name">
+                        <div class="transaction-icon received">
+                          <i class="ri-arrow-down-line"></i>
+                        </div>
+
+                        <div>
+                          <strong>Account Deposit</strong>
+                          <span>Cash Deposit</span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span class="date"> Sep 20, 2026 </span>
+
+                      <small>11:20 AM</small>
+                    </td>
+
+                    <td>
+                      <span class="type income-type"> Income </span>
+                    </td>
+
+                    <td>
+                      <strong class="amount income-amount">
+                        +₦50,000.00
+                      </strong>
+                    </td>
+
+                    <td>
+                      <span class="status successful"> Successful </span>
+                    </td>
+                  </tr>
+
+                  <!-- Transaction 4 -->
+
+                  <tr>
+                    <td>
+                      <div class="transaction-name">
+                        <div class="transaction-icon sent">
+                          <i class="ri-arrow-up-line"></i>
+                        </div>
+
+                        <div>
+                          <strong>Transfer to John</strong>
+                          <span>UBA</span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span class="date"> Sep 18, 2026 </span>
+
+                      <small>02:40 PM</small>
+                    </td>
+
+                    <td>
+                      <span class="type expense-type"> Expense </span>
+                    </td>
+
+                    <td>
+                      <strong class="amount expense-amount">
+                        -₦15,000.00
+                      </strong>
+                    </td>
+
+                    <td>
+                      <span class="status pending"> Pending </span>
+                    </td>
+                  </tr>
+
+                  <!-- Transaction 5 -->
+
+                  <tr>
+                    <td>
+                      <div class="transaction-name">
+                        <div class="transaction-icon received">
+                          <i class="ri-arrow-down-line"></i>
+                        </div>
+
+                        <div>
+                          <strong>Refund</strong>
+                          <span>APEX BANK</span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span class="date"> Sep 15, 2026 </span>
+
+                      <small>09:05 AM</small>
+                    </td>
+
+                    <td>
+                      <span class="type income-type"> Income </span>
+                    </td>
+
+                    <td>
+                      <strong class="amount income-amount">
+                        +₦20,000.00
+                      </strong>
+                    </td>
+
+                    <td>
+                      <span class="status successful"> Successful </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- PAGINATION -->
+
+            <div class="pagination">
+              <span> Showing 1–5 of 24 transactions </span>
+
+              <div class="pagination-buttons">
+                <button disabled>
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+
+                <button class="current">1</button>
+
+                <button>2</button>
+
+                <button>3</button>
+
+                <button>
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECURITY NOTE -->
+
+          <div class="security-note">
+            <i class="ri-shield-check-line"></i>
+
+            <div>
+              <strong>Transaction Security</strong>
+
+              <p>
+                Review your transactions regularly and report any activity you
+                do not recognize.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

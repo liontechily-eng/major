@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Accounts | APEX BANK</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="account.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="logo">
+            <img src="asset/apex.png" alt="APEX BANK Logo" />
+            <span>APEX BANK</span>
+          </div>
+
+          <nav class="navigation">
+            <a href="dashboard.html">
+              <i class="ri-home-5-fill"></i>
+              <span>Dashboard</span>
+            </a>
+
+            <a href="account.html" class="active">
+              <i class="ri-bank-line"></i>
+              <span>Accounts</span>
+            </a>
+
+            <a href="transfer.html">
+              <i class="ri-send-plane-line"></i>
+              <span>Transfer</span>
+            </a>
+
+            <a href="transactions.html">
+              <i class="ri-history-line"></i>
+              <span>Transactions</span>
+            </a>
+
+            <a class="nav-link" href="#">
+              <i class="ri-chat-ai-fill"></i>
+              <span>Chat Admin</span>
+            </a>
+          </nav>
+        </div>
+
+        <a href="login.html" class="logout">
+          <i class="ri-logout-box-r-line"></i>
+          <span>Logout</span>
+        </a>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- HEADER -->
+        <header class="top-header">
+          <div class="page-title">
+            <h1>My Accounts</h1>
+            <p>View and manage your account information.</p>
+          </div>
+
+          <div class="header-right">
+            <button class="notification" aria-label="Notifications">
+              <i class="ri-notification-3-line"></i>
+            </button>
+
+            <div class="profile">
+              <img src="asset/profile-picture.png" alt="Profile picture" />
+
+              <div class="profile-info">
+                <strong>Major</strong>
+                <span>Personal Account</span>
+              </div>
+
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- ACCOUNT CONTENT -->
+        <section class="accounts-section">
+          <!-- BALANCE CARD -->
+          <div class="balance-card">
+            <div class="balance-top">
+              <div>
+                <span class="label">Available Balance</span>
+
+                <div class="balance-value">
+                  <h2>₦00.00</h2>
+
+                  <button class="visibility-btn" aria-label="Hide balance">
+                    <i class="ri-eye-line"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="balance-icon">
+                <i class="ri-wallet-3-line"></i>
+              </div>
+            </div>
+
+            <div class="balance-bottom">
+              <div>
+                <span>Account Number</span>
+                <strong>0123456789</strong>
+              </div>
+
+              <button class="copy-btn">
+                <i class="ri-file-copy-line"></i>
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <!-- ACCOUNT INFORMATION -->
+          <div class="content-card">
+            <div class="card-header">
+              <div>
+                <h2>Account Information</h2>
+                <p>Your basic account details.</p>
+              </div>
+
+              <span class="status">
+                <i class="ri-checkbox-circle-fill"></i>
+                Active
+              </span>
+            </div>
+
+            <div class="details-grid">
+              <div class="detail-item">
+                <span>Account Name</span>
+                <strong>John Doe</strong>
+              </div>
+
+              <div class="detail-item">
+                <span>Account Type</span>
+                <strong>Savings Account</strong>
+              </div>
+
+              <div class="detail-item">
+                <span>Bank Name</span>
+                <strong>APEX BANK</strong>
+              </div>
+
+              <div class="detail-item">
+                <span>Currency</span>
+                <strong>NGN - Nigerian Naira</strong>
+              </div>
+
+              <div class="detail-item">
+                <span>Account Number</span>
+                <strong>0123456789</strong>
+              </div>
+
+              <div class="detail-item">
+                <span>Date Opened</span>
+                <strong>15 September 2026</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUICK ACTIONS -->
+          <div class="content-card">
+            <div class="card-header">
+              <div>
+                <h2>Quick Actions</h2>
+                <p>Manage your account with ease.</p>
+              </div>
+            </div>
+
+            <div class="actions">
+              <a href="transfer.html" class="action">
+                <div class="action-icon">
+                  <i class="ri-send-plane-line"></i>
+                </div>
+
+                <div>
+                  <strong>Transfer Money</strong>
+                  <span>Send money to another account</span>
+                </div>
+
+                <i class="ri-arrow-right-s-line arrow"></i>
+              </a>
+
+              <a href="#" class="action">
+                <div class="action-icon">
+                  <i class="ri-download-2-line"></i>
+                </div>
+
+                <div>
+                  <strong>Deposit Money</strong>
+                  <span>Add money to your account</span>
+                </div>
+
+                <i class="ri-arrow-right-s-line arrow"></i>
+              </a>
+
+              <a href="#" class="action">
+                <div class="action-icon">
+                  <i class="ri-upload-2-line"></i>
+                </div>
+
+                <div>
+                  <strong>Withdraw Money</strong>
+                  <span>Withdraw money from your account</span>
+                </div>
+
+                <i class="ri-arrow-right-s-line arrow"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- SECURITY NOTE -->
+          <div class="security-note">
+            <i class="ri-shield-check-line"></i>
+
+            <div>
+              <strong>Keep your account secure</strong>
+
+              <p>
+                Never share your password, PIN, OTP or other sensitive account
+                information with anyone.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
