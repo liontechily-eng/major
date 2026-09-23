@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deposit | APEX BANK</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Remix Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="deposit.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-top">
+
+                <div class="logo">
+                    <img src="asset/apex.png" alt="APEX BANK Logo">
+                    <span>APEX BANK</span>
+                </div>
+
+                <nav class="navigation">
+
+                    <a href="dashboard.html">
+                        <i class="ri-home-5-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a href="accounts.html">
+                        <i class="ri-bank-line"></i>
+                        <span>Accounts</span>
+                    </a>
+
+                    <a href="transfer.html">
+                        <i class="ri-send-plane-line"></i>
+                        <span>Transfer</span>
+                    </a>
+
+                    <a href="transactions.html">
+                        <i class="ri-file-list-3-line"></i>
+                        <span>Transactions</span>
+                    </a>
+
+            
+                    <a class="nav-link" href="#">
+            <i class="ri-chat-ai-fill"></i>
+            <span>Chat Admin</span>
+          </a>
+                </nav>
+
+            </div>
+
+            <a href="login.html" class="logout">
+                <i class="ri-logout-box-r-line"></i>
+                <span>Logout</span>
+            </a>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="top-header">
+
+                <div class="page-title">
+                    <h1>Deposit</h1>
+                    <p>Add money to your APEX BANK account.</p>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="notification" aria-label="Notifications">
+                        <i class="ri-notification-3-line"></i>
+                    </button>
+
+                    <div class="profile">
+
+                        <img
+                            src="asset/profile-picture.png"
+                            alt="Profile picture"
+                        >
+
+                        <div class="profile-info">
+                            <strong>John Doe</strong>
+                            <span>Personal Account</span>
+                        </div>
+
+                        <i class="ri-arrow-down-s-line"></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 DEPOSIT SECTION
+            ========================== -->
+
+            <section class="deposit-section">
+
+                <div class="deposit-card">
+
+                    <!-- CARD HEADING -->
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="ri-wallet-3-line"></i>
+                        </div>
+
+                        <div>
+                            <h2>Make a Deposit</h2>
+                            <p>Choose how you would like to fund your account.</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CURRENT BALANCE -->
+
+                    <div class="current-balance">
+
+                        <div>
+                            <span>Current Balance</span>
+                            <strong>₦250,000.00</strong>
+                        </div>
+
+                        <i class="ri-wallet-3-line"></i>
+
+                    </div>
+
+
+                    <!-- DEPOSIT FORM -->
+
+                    <form class="deposit-form">
+
+                        <!-- AMOUNT -->
+
+                        <div class="form-group">
+
+                            <label for="amount">
+                                Deposit Amount
+                            </label>
+
+                            <div class="amount-input">
+
+                                <span>₦</span>
+
+                                <input
+                                    type="number"
+                                    id="amount"
+                                    name="amount"
+                                    placeholder="0.00"
+                                    min="1"
+                                    step="0.01"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PAYMENT METHOD -->
+
+                        <div class="form-group">
+
+                            <label for="payment-method">
+                                Payment Method
+                            </label>
+
+                            <div class="select-wrapper">
+
+                                <i class="ri-bank-card-line"></i>
+
+                                <select
+                                    id="payment-method"
+                                    name="payment-method"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Select payment method
+                                    </option>
+
+                                    <option value="bank-transfer">
+                                        Bank Transfer
+                                    </option>
+
+                                    <option value="card">
+                                        Debit / Credit Card
+                                    </option>
+
+                                </select>
+
+                                <i class="ri-arrow-down-s-line select-arrow"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PAYMENT INFORMATION -->
+
+                        <div class="payment-info">
+
+                            <div class="info-icon">
+                                <i class="ri-information-line"></i>
+                            </div>
+
+                            <div>
+                                <strong>How it works</strong>
+
+                                <p>
+                                    Select your preferred payment method and
+                                    continue to the secure payment process.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONTINUE -->
+
+                        <button type="submit" class="continue-btn">
+                            Continue
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- DEPOSIT METHODS -->
+
+                <div class="methods-card">
+
+                    <div class="methods-heading">
+                        <h2>Available Deposit Methods</h2>
+                        <p>Choose a supported method to fund your account.</p>
+                    </div>
+
+
+                    <div class="method">
+
+                        <div class="method-icon">
+                            <i class="ri-bank-line"></i>
+                        </div>
+
+                        <div>
+                            <strong>Bank Transfer</strong>
+
+                            <span>
+                                Transfer money from another bank account.
+                            </span>
+                        </div>
+
+                        <i class="ri-arrow-right-s-line"></i>
+
+                    </div>
+
+
+                    <div class="method">
+
+                        <div class="method-icon">
+                            <i class="ri-bank-card-line"></i>
+                        </div>
+
+                        <div>
+                            <strong>Debit / Credit Card</strong>
+
+                            <span>
+                                Fund your account using a supported card.
+                            </span>
+                        </div>
+
+                        <i class="ri-arrow-right-s-line"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECURITY NOTE -->
+
+                <div class="security-note">
+
+                    <i class="ri-shield-check-line"></i>
+
+                    <div>
+                        <strong>Secure Payments</strong>
+
+                        <p>
+                            Never share your card PIN, password or OTP with
+                            anyone. APEX BANK will never ask you to reveal
+                            these details.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
