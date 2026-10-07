@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Help & Support | Apex Bank</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="support.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="asset/apex.png" alt="Apex Bank Logo" />
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="dashboard.html">
+            <i class="ri-home-5-fill"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="accounts.html">
+            <i class="ri-bank-line"></i>
+            <span>Accounts</span>
+          </a>
+
+          <a href="transfer.html">
+            <i class="ri-send-plane-line"></i>
+            <span>Transfer</span>
+          </a>
+
+          <a href="withdraw.html">
+            <i class="ri-hand-coin-line"></i>
+            <span>Withdraw</span>
+          </a>
+
+          <a href="transactions.html">
+            <i class="ri-file-list-3-line"></i>
+            <span>Transactions</span>
+          </a>
+
+          <a href="profile.html">
+            <i class="ri-settings-3-line"></i>
+            <span>Settings</span>
+          </a>
+
+          <a href="support.html" class="active">
+            <i class="ri-chat-ai-fill"></i>
+            <span>Chat Admin</span>
+          </a>
+
+          <a href="#">
+            <i class="ri-logout-box-r-line"></i>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- HEADER -->
+        <header class="top-header">
+          <div>
+            <h1>Help & Support</h1>
+            <p>Chat with our support team and get assistance.</p>
+          </div>
+
+          <div class="header-right">
+            <button class="notification-btn">
+              <i class="ri-notification-3-line"></i>
+              <span></span>
+            </button>
+
+            <div class="profile">
+              <img src="asset/profile-picture.png" alt="major" />
+
+              <div>
+                <strong>Major</strong>
+                <small>Personal Account</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- SUPPORT CONTENT -->
+        <section class="support-section">
+          <!-- SUPPORT HEADER -->
+          <div class="support-card">
+            <div class="support-header">
+              <div class="admin-profile">
+                <div class="admin-avatar">
+                  <i class="ri-admin-line"></i>
+                </div>
+
+                <div>
+                  <h2>APEX Support</h2>
+
+                  <div class="online-status">
+                    <span></span>
+                    <p>Admin is available</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="support-info">
+                <i class="ri-shield-check-line"></i>
+                <span>Secure Support</span>
+              </div>
+            </div>
+
+            <!-- CHAT -->
+            <div class="chat-container">
+              <div class="chat-date">
+                <span>Today</span>
+              </div>
+
+              <!-- ADMIN MESSAGE -->
+              <div class="message admin-message">
+                <div class="message-avatar">
+                  <i class="ri-admin-line"></i>
+                </div>
+
+                <div class="message-content">
+                  <div class="message-name">APEX Support</div>
+
+                  <div class="message-bubble">
+                    Hello John! 👋 Welcome to APEX Support. How can we assist
+                    you today?
+                  </div>
+
+                  <span class="message-time">10:30 AM</span>
+                </div>
+              </div>
+
+              <!-- USER MESSAGE -->
+              <div class="message user-message">
+                <div class="message-content">
+                  <div class="message-bubble">
+                    Hello, I would like to know more about my account.
+                  </div>
+
+                  <span class="message-time">10:32 AM</span>
+                </div>
+
+                <div class="message-avatar user-avatar">
+                  <img src="asset/profile-picture.png" alt="John Doe" />
+                </div>
+              </div>
+
+              <!-- ADMIN MESSAGE -->
+              <div class="message admin-message">
+                <div class="message-avatar">
+                  <i class="ri-admin-line"></i>
+                </div>
+
+                <div class="message-content">
+                  <div class="message-name">APEX Support</div>
+
+                  <div class="message-bubble">
+                    Sure. Please tell us what you need help with and we'll be
+                    happy to assist you.
+                  </div>
+
+                  <span class="message-time">10:33 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUICK HELP -->
+            <div class="quick-help">
+              <p>Quick help</p>
+
+              <div class="quick-options">
+                <button>
+                  <i class="ri-send-plane-line"></i>
+                  Transfer Issue
+                </button>
+
+                <button>
+                  <i class="ri-hand-coin-line"></i>
+                  Withdrawal
+                </button>
+
+                <button>
+                  <i class="ri-user-line"></i>
+                  Account Issue
+                </button>
+
+                <button>
+                  <i class="ri-question-line"></i>
+                  Other
+                </button>
+              </div>
+            </div>
+
+            <!-- MESSAGE INPUT -->
+            <form class="message-form">
+              <input type="text" placeholder="Type your message..." />
+
+              <button type="submit">
+                <i class="ri-send-plane-fill"></i>
+                <span>Send</span>
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

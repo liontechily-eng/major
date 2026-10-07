@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Transfer | APEX BANK</title>
+    <title>Withdraw | APEX BANK</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="transfer.css" />
+    <link rel="stylesheet" href="withdraw.css" />
   </head>
 
   <body>
@@ -44,12 +44,12 @@
               <span>Accounts</span>
             </a>
 
-            <a href="transfer.html" class="active">
+            <a href="transfer.html">
               <i class="ri-send-plane-line"></i>
               <span>Transfer</span>
             </a>
 
-            <a href="withdraw.html">
+            <a href="withdraw.html" class="active">
               <i class="ri-hand-coin-line"></i>
               <span>Withdraw</span>
             </a>
@@ -87,8 +87,8 @@
         <!-- HEADER -->
         <header class="top-header">
           <div class="page-title">
-            <h1>Transfer</h1>
-            <p>Send money securely to another account.</p>
+            <h1>Withdraw</h1>
+            <p>Withdraw money from your account securely.</p>
           </div>
 
           <div class="header-right">
@@ -109,24 +109,63 @@
           </div>
         </header>
 
-        <!-- TRANSFER SECTION -->
-        <section class="transfer-section">
-          <div class="transfer-card">
+        <!-- WITHDRAW SECTION -->
+        <section class="withdraw-section">
+          <div class="withdraw-card">
             <div class="card-heading">
               <div class="heading-icon">
-                <i class="ri-send-plane-fill"></i>
+                <i class="ri-hand-coin-fill"></i>
               </div>
 
               <div>
-                <h2>Send Money</h2>
-                <p>Enter the recipient's details below.</p>
+                <h2>Withdraw Money</h2>
+                <p>Enter the details below to make a withdrawal.</p>
               </div>
             </div>
 
-            <form class="transfer-form">
-              <!-- RECIPIENT ACCOUNT -->
+            <form class="withdraw-form">
+              <!-- WITHDRAWAL METHOD -->
               <div class="form-group">
-                <label for="account-number"> Recipient Account Number </label>
+                <label for="withdraw-method"> Withdrawal Method </label>
+
+                <div class="input-wrapper">
+                  <i class="ri-wallet-3-line"></i>
+
+                  <select id="withdraw-method" name="withdraw-method" required>
+                    <option value="" selected disabled>
+                      Select withdrawal method
+                    </option>
+
+                    <option value="bank-account">Bank Account</option>
+
+                    <option value="cash">Cash Withdrawal</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- BANK -->
+              <div class="form-group">
+                <label for="bank"> Select Bank </label>
+
+                <div class="input-wrapper">
+                  <i class="ri-bank-line"></i>
+
+                  <select id="bank" name="bank" required>
+                    <option value="" selected disabled>Select your bank</option>
+
+                    <option value="access">Access Bank</option>
+                    <option value="first">First Bank</option>
+                    <option value="gtbank">GTBank</option>
+                    <option value="opay">Opay</option>
+                    <option value="uba">UBA</option>
+                    <option value="zenith">Zenith Bank</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- ACCOUNT NUMBER -->
+              <div class="form-group">
+                <label for="account-number"> Account Number </label>
 
                 <div class="input-wrapper">
                   <i class="ri-bank-card-line"></i>
@@ -140,33 +179,6 @@
                     inputmode="numeric"
                     required
                   />
-                </div>
-              </div>
-
-              <!-- BANK -->
-              <div class="form-group">
-                <label for="bank"> Select Bank </label>
-
-                <div class="input-wrapper">
-                  <i class="ri-bank-line"></i>
-
-                  <select id="bank" name="bank" required>
-                    <option value="" selected disabled>
-                      Select recipient's bank
-                    </option>
-
-                    <option value="access">Access Bank</option>
-
-                    <option value="first">First Bank</option>
-
-                    <option value="gtbank">GTBank</option>
-
-                    <option value="opay">Opay</option>
-
-                    <option value="uba">UBA</option>
-
-                    <option value="zenith">Zenith Bank</option>
-                  </select>
                 </div>
               </div>
 
@@ -201,7 +213,7 @@
                   <textarea
                     id="description"
                     name="description"
-                    placeholder="What is this transfer for?"
+                    placeholder="What is this withdrawal for?"
                     rows="4"
                     maxlength="100"
                   ></textarea>
@@ -219,7 +231,7 @@
               </div>
 
               <!-- BUTTON -->
-              <button type="submit" class="continue-btn">
+              <button type="submit" class="withdraw-btn">
                 Continue
                 <i class="ri-arrow-right-line"></i>
               </button>
@@ -231,10 +243,10 @@
             <i class="ri-shield-check-line"></i>
 
             <div>
-              <strong>Secure Transfer</strong>
+              <strong>Secure Withdrawal</strong>
+
               <p>
-                Always verify the recipient's account details before confirming
-                a transfer.
+                Make sure your withdrawal details are correct before continuing.
               </p>
             </div>
           </div>

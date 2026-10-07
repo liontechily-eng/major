@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Notifications | APEX BANK</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="notifications.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="logo">
+            <img src="asset/apex.png" alt="APEX BANK Logo" />
+            <span>APEX BANK</span>
+          </div>
+
+          <nav class="navigation">
+            <a href="dashboard.html">
+              <i class="ri-home-5-fill"></i>
+              <span>Dashboard</span>
+            </a>
+
+            <a href="account.html">
+              <i class="ri-bank-line"></i>
+              <span>Accounts</span>
+            </a>
+
+            <a href="transfer.html">
+              <i class="ri-send-plane-line"></i>
+              <span>Transfer</span>
+            </a>
+
+            <a href="withdraw.html">
+              <i class="ri-hand-coin-line"></i>
+              <span>Withdraw</span>
+            </a>
+
+            <a href="transactions.html">
+              <i class="ri-file-list-3-line"></i>
+              <span>Transactions</span>
+            </a>
+
+            <a href="profile.html">
+              <i class="ri-settings-3-line"></i>
+              <span>Settings</span>
+            </a>
+
+            <a href="notifications.html" class="active">
+              <i class="ri-notification-3-fill"></i>
+              <span>Notifications</span>
+            </a>
+
+            <a class="nav-link" href="support.html">
+              <i class="ri-chat-ai-fill"></i>
+              <span>Chat Admin</span>
+            </a>
+          </nav>
+        </div>
+
+        <a href="login.html" class="logout">
+          <i class="ri-logout-box-r-line"></i>
+          <span>Logout</span>
+        </a>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- HEADER -->
+        <header class="top-header">
+          <div class="page-title">
+            <h1>Notifications</h1>
+            <p>Stay updated with your account activity.</p>
+          </div>
+
+          <div class="header-right">
+            <button class="notification">
+              <i class="ri-notification-3-fill"></i>
+            </button>
+
+            <div class="profile">
+              <img src="asset/profile-picture.png" alt="Profile picture" />
+
+              <div class="profile-info">
+                <strong>Major</strong>
+                <span>Personal Account</span>
+              </div>
+
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- NOTIFICATIONS SECTION -->
+        <section class="notifications-section">
+          <!-- NOTIFICATION HEADER -->
+          <div class="notifications-header">
+            <div>
+              <h2>Recent Notifications</h2>
+              <p>You have <strong>3 unread</strong> notifications.</p>
+            </div>
+
+            <button class="mark-read-btn">
+              <i class="ri-check-double-line"></i>
+              Mark all as read
+            </button>
+          </div>
+
+          <!-- TODAY -->
+          <div class="notification-group">
+            <h3>Today</h3>
+
+            <!-- UNREAD TRANSACTION -->
+            <div class="notification-card unread">
+              <div class="notification-icon transaction">
+                <i class="ri-arrow-left-right-line"></i>
+              </div>
+
+              <div class="notification-content">
+                <div class="notification-title">
+                  <strong>Transfer Successful</strong>
+                  <span class="unread-dot"></span>
+                </div>
+
+                <p>Your transfer of ₦25,000.00 was successfully completed.</p>
+
+                <span class="notification-time">
+                  <i class="ri-time-line"></i>
+                  10 minutes ago
+                </span>
+              </div>
+
+              <button class="more-btn">
+                <i class="ri-more-2-fill"></i>
+              </button>
+            </div>
+
+            <!-- UNREAD SECURITY -->
+            <div class="notification-card unread">
+              <div class="notification-icon security">
+                <i class="ri-shield-check-line"></i>
+              </div>
+
+              <div class="notification-content">
+                <div class="notification-title">
+                  <strong>Security Alert</strong>
+                  <span class="unread-dot"></span>
+                </div>
+
+                <p>A new login to your account was detected.</p>
+
+                <span class="notification-time">
+                  <i class="ri-time-line"></i>
+                  1 hour ago
+                </span>
+              </div>
+
+              <button class="more-btn">
+                <i class="ri-more-2-fill"></i>
+              </button>
+            </div>
+
+            <!-- UNREAD DEPOSIT -->
+            <div class="notification-card unread">
+              <div class="notification-icon deposit">
+                <i class="ri-add-circle-line"></i>
+              </div>
+
+              <div class="notification-content">
+                <div class="notification-title">
+                  <strong>Deposit Received</strong>
+                  <span class="unread-dot"></span>
+                </div>
+
+                <p>₦50,000.00 has been added to your account.</p>
+
+                <span class="notification-time">
+                  <i class="ri-time-line"></i>
+                  3 hours ago
+                </span>
+              </div>
+
+              <button class="more-btn">
+                <i class="ri-more-2-fill"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- YESTERDAY -->
+          <div class="notification-group">
+            <h3>Yesterday</h3>
+
+            <!-- READ NOTIFICATION -->
+            <div class="notification-card">
+              <div class="notification-icon withdrawal">
+                <i class="ri-hand-coin-line"></i>
+              </div>
+
+              <div class="notification-content">
+                <div class="notification-title">
+                  <strong>Withdrawal Completed</strong>
+                </div>
+
+                <p>Your withdrawal of ₦15,000.00 was completed successfully.</p>
+
+                <span class="notification-time">
+                  <i class="ri-time-line"></i>
+                  Yesterday, 4:32 PM
+                </span>
+              </div>
+
+              <button class="more-btn">
+                <i class="ri-more-2-fill"></i>
+              </button>
+            </div>
+
+            <!-- READ NOTIFICATION -->
+            <div class="notification-card">
+              <div class="notification-icon account">
+                <i class="ri-user-settings-line"></i>
+              </div>
+
+              <div class="notification-content">
+                <div class="notification-title">
+                  <strong>Profile Updated</strong>
+                </div>
+
+                <p>Your profile information was successfully updated.</p>
+
+                <span class="notification-time">
+                  <i class="ri-time-line"></i>
+                  Yesterday, 1:15 PM
+                </span>
+              </div>
+
+              <button class="more-btn">
+                <i class="ri-more-2-fill"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- EARLIER -->
+          <div class="notification-group">
+            <h3>Earlier</h3>
+
+            <div class="notification-card">
+              <div class="notification-icon welcome">
+                <i class="ri-hand-heart-line"></i>
+              </div>
+
+              <div class="notification-content">
+                <div class="notification-title">
+                  <strong>Welcome to APEX BANK</strong>
+                </div>
+
+                <p>Your APEX BANK account is ready. Welcome aboard!</p>
+
+                <span class="notification-time">
+                  <i class="ri-time-line"></i>
+                  October 1, 2026
+                </span>
+              </div>
+
+              <button class="more-btn">
+                <i class="ri-more-2-fill"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

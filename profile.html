@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profile & Settings | APEX BANK</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="logo">
+            <img src="asset/apex.png" alt="APEX BANK Logo" />
+            <span>APEX BANK</span>
+          </div>
+
+          <nav class="navigation">
+            <a href="dashboard.html">
+              <i class="ri-home-5-fill"></i>
+              <span>Dashboard</span>
+            </a>
+
+            <a href="account.html">
+              <i class="ri-bank-line"></i>
+              <span>Accounts</span>
+            </a>
+
+            <a href="transfer.html">
+              <i class="ri-send-plane-line"></i>
+              <span>Transfer</span>
+            </a>
+
+            <a href="withdraw.html">
+              <i class="ri-hand-coin-line"></i>
+              <span>Withdraw</span>
+            </a>
+
+            <a href="transactions.html">
+              <i class="ri-file-list-3-line"></i>
+              <span>Transactions</span>
+            </a>
+
+            <a href="profile.html" class="active">
+              <i class="ri-settings-3-line"></i>
+              <span>Settings</span>
+            </a>
+
+            <a href="notifications.html">
+              <i class="ri-notification-3-fill"></i>
+              <span>Notifications</span>
+            </a>
+
+            <a class="nav-link" href="support.html">
+              <i class="ri-chat-ai-fill"></i>
+              <span>Chat Admin</span>
+            </a>
+          </nav>
+        </div>
+
+        <a href="login.html" class="logout">
+          <i class="ri-logout-box-r-line"></i>
+          <span>Logout</span>
+        </a>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- HEADER -->
+        <header class="top-header">
+          <div class="page-title">
+            <h1>Profile & Settings</h1>
+            <p>Manage your personal information and account settings.</p>
+          </div>
+
+          <div class="header-right">
+            <button class="notification">
+              <i class="ri-notification-3-line"></i>
+            </button>
+
+            <div class="profile">
+              <img src="asset/profile-picture.png" alt="Profile picture" />
+
+              <div class="profile-info">
+                <strong>Major</strong>
+                <span>Personal Account</span>
+              </div>
+
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- SETTINGS CONTENT -->
+        <section class="settings-section">
+          <!-- PROFILE CARD -->
+          <div class="settings-card profile-card">
+            <div class="card-heading">
+              <div class="heading-icon">
+                <i class="ri-user-3-fill"></i>
+              </div>
+
+              <div>
+                <h2>Profile Information</h2>
+                <p>Update your personal information.</p>
+              </div>
+            </div>
+
+            <!-- PROFILE PICTURE -->
+            <div class="profile-picture-section">
+              <div class="profile-image">
+                <img src="asset/profile-picture.png" alt="Profile picture" />
+
+                <button class="camera-btn" type="button">
+                  <i class="ri-camera-line"></i>
+                </button>
+              </div>
+
+              <div class="profile-picture-info">
+                <strong>Profile Picture</strong>
+                <span>JPG or PNG. Maximum size 2MB.</span>
+              </div>
+            </div>
+
+            <!-- PERSONAL INFORMATION -->
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+
+                <div class="input-wrapper">
+                  <i class="ri-user-line"></i>
+
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    value="John"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+
+                <div class="input-wrapper">
+                  <i class="ri-user-line"></i>
+
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    value="Doe"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+
+                <div class="input-wrapper">
+                  <i class="ri-mail-line"></i>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value="johndoe@example.com"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+
+                <div class="input-wrapper">
+                  <i class="ri-phone-line"></i>
+
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value="+234 800 000 0000"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="address">Address</label>
+
+                <div class="input-wrapper">
+                  <i class="ri-map-pin-line"></i>
+
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    value="123 Main Street"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCOUNT INFORMATION -->
+          <div class="settings-card">
+            <div class="card-heading">
+              <div class="heading-icon">
+                <i class="ri-bank-card-line"></i>
+              </div>
+
+              <div>
+                <h2>Account Information</h2>
+                <p>View your account details.</p>
+              </div>
+            </div>
+
+            <div class="account-info-grid">
+              <div class="account-info-item">
+                <span>Account Name</span>
+                <strong>John Doe</strong>
+              </div>
+
+              <div class="account-info-item">
+                <span>Account Number</span>
+                <strong>0123456789</strong>
+              </div>
+
+              <div class="account-info-item">
+                <span>Account Type</span>
+                <strong>Personal Account</strong>
+              </div>
+
+              <div class="account-info-item">
+                <span>Account Status</span>
+
+                <strong class="status">
+                  <i class="ri-checkbox-circle-fill"></i>
+                  Active
+                </strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECURITY -->
+          <div class="settings-card">
+            <div class="card-heading">
+              <div class="heading-icon">
+                <i class="ri-shield-keyhole-fill"></i>
+              </div>
+
+              <div>
+                <h2>Security</h2>
+                <p>Manage your password and account security.</p>
+              </div>
+            </div>
+
+            <div class="security-item">
+              <div class="security-item-left">
+                <div class="security-icon">
+                  <i class="ri-lock-password-line"></i>
+                </div>
+
+                <div>
+                  <strong>Password</strong>
+                  <span>Last changed recently</span>
+                </div>
+              </div>
+
+              <button class="secondary-btn" type="button">
+                Change Password
+              </button>
+            </div>
+
+            <div class="security-item">
+              <div class="security-item-left">
+                <div class="security-icon">
+                  <i class="ri-shield-check-line"></i>
+                </div>
+
+                <div>
+                  <strong>Two-Factor Authentication</strong>
+                  <span>Add an extra layer of security.</span>
+                </div>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- NOTIFICATIONS -->
+          <div class="settings-card">
+            <div class="card-heading">
+              <div class="heading-icon">
+                <i class="ri-notification-3-fill"></i>
+              </div>
+
+              <div>
+                <h2>Notifications</h2>
+                <p>Choose how you want to receive notifications.</p>
+              </div>
+            </div>
+
+            <div class="notification-item">
+              <div>
+                <strong>Transaction Notifications</strong>
+                <span> Receive notifications when transactions are made. </span>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="notification-item">
+              <div>
+                <strong>Security Alerts</strong>
+                <span> Receive important alerts about your account. </span>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- ACTIONS -->
+          <div class="settings-actions">
+            <button type="button" class="cancel-btn">Cancel</button>
+
+            <button type="button" class="save-btn">
+              <i class="ri-save-line"></i>
+              Save Changes
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
